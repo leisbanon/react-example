@@ -41,7 +41,7 @@ class Content extends React.Component {
                 <p>Props Data : {this.props.message}</p>
                 <pre>
                     在React 生命周期，也是非常重要的一部分，学习并了解它，即有效的帮助我们理解React ！React 主要生命周期说明：
-                    <p className='color-green'>1、componentWillMount => 组件渲染前调用，Dom 元素还没有构建完成，当时我们可以获取this.state 组件中状态</p>
+                    <p className='color-green'>1、componentWillMount => 组件渲染前调用，Dom 元素还没有构建完成，但是我们可以获取this.state 组件中状态</p>
 
                     <p className='color-green'>2、componentDidMount => 组件完成时调用的钩子，这时我们可以获取元素。一般在这里我们做网络请求的操作。</p>
 

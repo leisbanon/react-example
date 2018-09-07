@@ -34,7 +34,8 @@ class Manage extends React.Component {
                 <p>onBlur 失去焦点事件：<input type="text" onBlur={this.onBlur.bind(this)}/></p>
 
                 <pre>
-                    定义React 事件在需要在标签定义绑定点击事件：
+                    <div>定义React 事件在需要在标签定义绑定点击事件：</div>
+                    <div className='color-green'>需要注意的时，在绑定函数是，我们需要为该函数绑定 this 来正确的指明当前函数的指向，类中定义的方法是不会默认绑定 this 的。 因此如果我们不绑定this ,那么调用该函数的 this 值将是 undefined，即当前this 指向实际是 constructor。</div>
                     <code>
         {`
             class Manage extends React.Component {

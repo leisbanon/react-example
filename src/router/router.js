@@ -83,6 +83,17 @@ const routers = [
         path:'/reactForm',
         component:loadables('reactForm')
     },
+    {
+        // 父子，子父组件之间的通讯
+        path:'/components',
+        component:loadables('componentMes')
+    },
+    {
+        // 获取组件对象
+        path:'/refs',
+        component:loadables('getElement')
+    }
+
 ];
 
 

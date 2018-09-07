@@ -21,6 +21,8 @@ const Content = withRouter(({history,location,match}) => {
             <p onClick={() => history.push(`${match.path}/componentLife`)}>5、React 生命周期</p>
             <p onClick={() => history.push(`${match.path}/reactAjax`)}>6、React 中如何执行Ajax 异步请求</p>
             <p onClick={() => history.push(`${match.path}/reactForm`)}>7、React Form 表单的处理</p>
+            <p onClick={() => history.push(`${match.path}/components`)}>8、子父组件之间的通讯</p>
+            <p onClick={() => history.push(`${match.path}/refs`)}>8、refs 绑定，获取组件中元素</p>
         </div>
     )
 })
