@@ -43,7 +43,7 @@ class Refs extends React.Component {
 
                 <Content ref='contentCom'/>
                 <pre>
-                    <p>当然我们可以通过refs 属性获取任何子组件的实例，这使得在组件上的应用更加灵活，而在代码层次即不显得复杂，突显React在语法可扩展上的强的优势。</p>
+                    <p>当然我们可以通过refs 属性获取父组件的实例，这使得在组件上的应用更加灵活。</p>
 
                     <div className='color-green'>// 在父组件中定义ref 属性</div>
                     <div>{`<Content ref='contentCom'/>`}</div>
@@ -55,7 +55,10 @@ class Refs extends React.Component {
                         content.getMessage('Hello React Refs')
                     `}</div>
                 </pre>
-                <p><button onClick={this.getContent.bind(this)}>通过refs 获取子组件中的实例</button></p>
+                <p><button onClick={this.getContent.bind(this)}>通过refs 获取父组件中的实例</button></p>
+
+                <SubHeader title='什么时候使用 React Refs？'/>
+                <p>&emsp;&emsp;我们可以通过refs 属性获取Dom 元素从而拿到我们想要的东西，就好像上面我们通过refs 获取input element，从而获取form value. 其实这是不推荐的！让应用更具体现React 的特点，我们应该将input 绑定onChange() 事件将form value 时刻绑定到component state中！ </p>
             </div>
         )
     }

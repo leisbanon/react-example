@@ -23,6 +23,8 @@ const Content = withRouter(({history,location,match}) => {
             <p onClick={() => history.push(`${match.path}/reactForm`)}>7、React Form 表单的处理</p>
             <p onClick={() => history.push(`${match.path}/components`)}>8、子父组件之间的通讯</p>
             <p onClick={() => history.push(`${match.path}/refs`)}>8、refs 绑定，获取组件中元素</p>
+            <p onClick={() => history.push(`${match.path}/context`)}>9、<span className='color-red'>高级进阶--</span>React Context 属性的介绍和使用</p>
+            <p onClick={() => history.push(`${match.path}/lagacyContext`)}>10、<span className='color-red'>高级进阶--</span>React Legacy Context（老版本React Context）</p>
         </div>
     )
 })

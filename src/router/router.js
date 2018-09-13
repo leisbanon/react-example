@@ -92,6 +92,15 @@ const routers = [
         // 获取组件对象
         path:'/refs',
         component:loadables('getElement')
+    },
+    {
+        // React Context 属性的介绍和使用
+        path:'/context',
+        component:loadables('reactContext')
+    },
+    {
+        path:'/lagacyContext',
+        component:loadables('legacyContext')
     }
 
 ];
