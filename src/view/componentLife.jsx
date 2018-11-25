@@ -26,14 +26,14 @@ class Content extends React.Component {
     }
     //组件接收到一个新的Props 或者 state时，但是还未render时调用
     componentWillUpdate() {
-        console.log('组件接收到一个新的Props 或者 state时，但是还未render时调用 => componentWillUpdate');
+        console.log('当组件接收到新的props 或者 state 但还没有render时调用，在应用初始化时不调用 => componentWillUpdate');
     }
-    //组件完成更新时调用
+    //在组件完成更新后立即调用。在应用初始化时不调用
     componentDidUpdate() {
-        console.log('组件完成更新时调用 => componentWillUpdate');
+        console.log('在组件完成更新后立即调用。在应用初始化时不调用 => componentDidUpdate');
     }
     componentWillUnmount() {
-        console.log('组件中DOM 中移除');
+        console.log('组件销毁。当组件中Dom 中移除是触发该钩子 => componentWillUnmount');
     }
     render() {
         return(
@@ -47,9 +47,9 @@ class Content extends React.Component {
 
                     <p className='color-green'>3、componentWillReceiveProps => 当组件Props 或者 state 数据发生更新时调用该钩子。这时候Dom 并未发现改变，即未执行 render 动作</p>
 
-                    <p className='color-green'>4、componentWillUpdate => 当props 或者 state 更新完成，组件接收到props 或者 state 时调用该钩子，未发生render 动作</p>
+                    <p className='color-green'>4、componentWillUpdate => 当组件接收到新的props 或者 state 但还没有render时调用，在应用初始化时不调用</p>
 
-                    <p className='color-green'>5、componentWillUpdate => 当props 或者 state 到数据并且组件完成更新的调用该钩子，render 执行</p>
+                    <p className='color-green'>5、componentDidUpdate  => 在组件完成更新后立即调用。在应用初始化时不调用</p>
 
                     <p className='color-green'>6、componentWillUnmount => 组件销毁。当组件中Dom 中移除是触发该钩子。</p>
                 </pre>

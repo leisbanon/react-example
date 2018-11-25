@@ -5,11 +5,16 @@ import { SubHeader } from '@/components/index'
 
 
 const Parent = (props) => {
+    let onBtn = () => {
+        // 解耦赋组件Props 中的方法，并调用该方式实现子组件向父组件发送数据的功能
+        let {emit} = props;
+        emit('hello react component')
+    }
     return(
         <main>
             <p>这里我们接受到的Props Data：{JSON.stringify(props)}</p>
             
-            <p><button onClick={props.emit.bind(this,'Get Data')}>子组件调用父组件中的方法，并传入参数</button></p>
+            <p><button onClick={() => onBtn()}>子组件调用父组件中的方法，并传入参数</button></p>
         </main>
     )
 }
@@ -52,7 +57,21 @@ class ComponentMes extends React.Component {
                     <div>{`<Parent emit={this.emit.bind(this)}/>`}</div>
 
                     <div className='color-green'>// 子组件接收Porps,并调用该函数</div>
-                    <div>{`<Parent emit={this.emit.bind(this)}/>`}</div>
+                    <code>{`
+                    const Parent = (props) => {
+                        let onBtn = () => {
+                            `}
+                            <span className='color-green'>// 解耦参数Props 中的方法，并调用该方式实现子组件向父组件发送数据的功能</span>
+                            {`
+                            let {emit} = props;
+                            emit('hello react component')
+                        }
+                        return(
+                            <main>
+                            </main>
+                        )
+                    }
+                    `}</code>
                 </pre>
             </div>
         )
